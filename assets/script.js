@@ -1,0 +1,2 @@
+$("#test").css('color', 'red');
+
