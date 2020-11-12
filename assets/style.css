@@ -61,7 +61,6 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
-    gap: 1.5em;
 
 }
 
@@ -72,14 +71,15 @@ main {
     align-items: center;
     flex-direction: column;
     grid-column: 1;
-    margin-left: 1rem;;
+    margin-left: 1rem;
+    margin-right: 1rem;;
 }
 
 .history {
     background-color: #6C757D;
     color: #E9ECEF;
     margin-top: 1rem;
-    width: 100%;
+    width: 50%;
     font-size: 1rem;
     padding: 1rem;
 }
@@ -95,10 +95,68 @@ main {
     align-items: center;
     flex-direction: column;
     grid-column: 2;
+    margin-top: 1rem;
 }
 
 img {
     width: 100%;
 }
+
+#drink-title {
+    background-color: #212529;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    color: #E9ECEF;
+    font-size: 2.5rem;
+    padding: 0;
+    margin: 0;
+    padding: 0.5rem;
+}
+
+.directions-h3 {
+    padding: 0;
+    margin-top: 1rem;
+    text-decoration: underline;
+    display: inline;
+    font-size: 1.5rem;
+}
+
+.directions-p {
+    display: inline;
+    font-size: 1.3rem;
+}
+
+#ingredients-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.ingredients-h3 {
+    padding: 0;
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+    text-decoration: underline;
+    font-size: 1.5rem;
+}
+
+ul {
+   margin: 0;
+}
+
+li {
+    font-size: 1.3rem;
+}
+
+
+
+
 
 /*# sourceMappingURL=style.css.map */
