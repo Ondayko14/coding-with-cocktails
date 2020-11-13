@@ -3,6 +3,7 @@
 var titleEl = document.getElementById("drink-title")
 var directionsEl = document.getElementById("directions")
 var ingredientsEl = document.getElementById("ingredients")
+var giphyNameSearch = "";
 
 //Get Random Cocktail
  var randomCocktail = function() {
@@ -18,7 +19,9 @@ fetch(
     console.log(data);
 
     //Random Cocktail's Name
-    var cocktailName = data.drinks[0].strDrink
+    var cocktailName = data.drinks[0].strDrink;
+    giphyNameSearch = cocktailName.replaceAll(" ", "%20");
+    console.log(giphyNameSearch);
     $("#drink-title").empty().append(cocktailName)
 
     //Random Cocktail's Instructions
@@ -43,7 +46,7 @@ fetch(
     data.drinks[0].strMeasure14 + data.drinks[0].strIngredient14,
     data.drinks[0].strMeasure15 + data.drinks[0].strIngredient15,
       ]
-
+    
     $("#ingredients").empty()
 
     for (var i = 0; i < 14; ++i) {
@@ -55,8 +58,27 @@ fetch(
       }
     }
 
-  });
+  }).then(function(){
+    //Call Img search
+    cocktailImg();
+  })
 
+ }
+
+ //Get Corresponding Coctail Img
+ var cocktailImg = function () {
+  var apiKey = "8FuSrS1RcUYjB1yNzrw16a59YJ3g0AUk";
+  console.log(giphyNameSearch);
+  console.log("https://api.giphy.com/v1/gifs/search?api_key="+apiKey+"&q="+giphyNameSearch);
+	fetch("https://api.giphy.com/v1/gifs/search?api_key="+apiKey+"&q="+giphyNameSearch).then(function(response) {
+		response.json().then(function(data) {
+			giphyObj(data);
+		});
+	})
+ };
+
+ var giphyObj = function(data) {
+    console.log(data);
  }
 
  // When "Click Me! " Button is Clicked, Generate Random Cocktail
