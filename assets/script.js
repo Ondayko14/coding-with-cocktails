@@ -163,7 +163,8 @@ $("#random-button").on("click", function() {
 
 // When Recent Cocktail Button is clicked, reload recent cocktail
 $(document).on("click", ".history", function() {
-  console.log("clicked!")
+  var clickedName = $(this).text(); 
+  recentCocktail(clickedName);
 })
 
 // Load Recent Cocktails from Local Storage when page loads
