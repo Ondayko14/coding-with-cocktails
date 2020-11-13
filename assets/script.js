@@ -16,12 +16,10 @@ fetch(
     return response.json();
   })
   .then(function(data) {
-    console.log(data);
 
     //Random Cocktail's Name
     var cocktailName = data.drinks[0].strDrink;
     giphyNameSearch = cocktailName.replaceAll(" ", "%20");
-    console.log(giphyNameSearch);
     $("#drink-title").empty().append(cocktailName)
 
     //Random Cocktail's Instructions
@@ -68,8 +66,6 @@ fetch(
  //Get Corresponding Coctail Img
  var cocktailImg = function () {
   var apiKey = "8FuSrS1RcUYjB1yNzrw16a59YJ3g0AUk";
-  console.log(giphyNameSearch);
-  console.log("https://api.giphy.com/v1/gifs/search?api_key="+apiKey+"&q="+giphyNameSearch);
 	fetch("https://api.giphy.com/v1/gifs/search?api_key="+apiKey+"&q="+giphyNameSearch).then(function(response) {
 		response.json().then(function(data) {
 			giphyObj(data);
@@ -78,7 +74,9 @@ fetch(
  };
 
  var giphyObj = function(data) {
-    console.log(data);
+    var imgSelect = data.data[0].images.original.url;
+
+    $("#img-placer").attr("src", imgSelect);
  }
 
  // When "Click Me! " Button is Clicked, Generate Random Cocktail
