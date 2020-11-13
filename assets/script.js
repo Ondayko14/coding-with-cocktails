@@ -162,7 +162,7 @@ $("#random-button").on("click", function() {
 })
 
 // When Recent Cocktail Button is clicked, reload recent cocktail
-$(".history").on("click", function() {
+$(document).on("click", ".history", function() {
   console.log("clicked!")
 })
 
