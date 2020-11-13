@@ -4,6 +4,7 @@ var titleEl = document.getElementById("drink-title")
 var directionsEl = document.getElementById("directions")
 var ingredientsEl = document.getElementById("ingredients")
 var giphyNameSearch = "";
+var savedArray = [];
 
 //Get Random Cocktail
  var randomCocktail = function() {
@@ -19,6 +20,10 @@ fetch(
 
     //Random Cocktail's Name
     var cocktailName = data.drinks[0].strDrink;
+    savedArray.push(cocktailName);
+    console.log(savedArray);
+    localStorage.setItem("setTerms", JSON.stringify(savedArray));
+    loadfunctions();
     giphyNameSearch = cocktailName.replaceAll(" ", "%20");
     $("#drink-title").empty().append(cocktailName)
 
@@ -62,7 +67,17 @@ fetch(
   })
 
  }
-
+var loadfunctions = function() {
+  var searchTerm = JSON.parse(localStorage.getItem("setTerms"));
+  $("#history-wrapper button").remove();
+  if(!searchTerm) {
+    return;
+  }
+  for(var i = 0; i < searchTerm.length; i++) {
+    var button = $("<button>").addClass("history").attr({type: "button", id: i}).text(searchTerm[i]);
+    $("#history-wrapper").append(button);
+  }
+}
  //Get Corresponding Coctail Img
  var cocktailImg = function () {
   var apiKey = "8FuSrS1RcUYjB1yNzrw16a59YJ3g0AUk";
@@ -83,3 +98,4 @@ fetch(
 $("#random-button").on("click", function () {
     randomCocktail()
 })
+
