@@ -19,10 +19,22 @@ fetch(
   .then(function(data) {
     //Random Cocktail's Name
     var cocktailName = data.drinks[0].strDrink;
+
+    //Push and Save the coctail name to savedArray
+    if (savedArray.length < 8) {
     savedArray.push(cocktailName);
     console.log(savedArray);
+    } else {
+      //Removes oldest search after 8
+      savedArray.shift();
+      savedArray.push(cocktailName);
+    }
     localStorage.setItem("setTerms", JSON.stringify(savedArray));
+
+    //Call Load function to bring in history buttons
     loadfunctions();
+
+    //giphy search name parameter
     giphyNameSearch = cocktailName.replaceAll(" ", "%20");
     $("#drink-title").empty().append(cocktailName)
 
