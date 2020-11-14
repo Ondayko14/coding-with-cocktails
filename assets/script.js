@@ -164,8 +164,14 @@ var loadfunctions = function() {
 	})
  };
  var giphyObj = function(data) {
-    var imgSelect = data.data[0].images.original.url;
 
+    //if the image doesn't exist, display stock img
+
+    if(!data.data[0]) {
+      var imgSelect = "https://media2.giphy.com/media/UWpfAsp7klhw4/200.webp?cid=ecf05e470vrohag4v3mode6jf56nv67dbzkao59lusslf51p&rid=200.webp";
+    } else {
+    var imgSelect = data.data[0].images.original.url;
+    };
     $("#img-placer").attr("src", imgSelect);
  }
 
