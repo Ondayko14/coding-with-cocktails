@@ -22,12 +22,12 @@ fetch(
 
     //Push and Save the coctail name to savedArray
     if (savedArray.length < 8) {
-    savedArray.push(cocktailName);
+    savedArray.unshift(cocktailName);
     console.log(savedArray);
     } else {
       //Removes oldest search after 8
-      savedArray.shift();
-      savedArray.push(cocktailName);
+      savedArray.pop();
+      savedArray.unshift(cocktailName);
     }
     localStorage.setItem("setTerms", JSON.stringify(savedArray));
 
