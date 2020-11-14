@@ -17,7 +17,6 @@ fetch(
     return response.json();
   })
   .then(function(data) {
-
     //Random Cocktail's Name
     var cocktailName = data.drinks[0].strDrink;
     savedArray.push(cocktailName);
@@ -87,13 +86,11 @@ var loadfunctions = function() {
 		});
 	})
  };
-
  var giphyObj = function(data) {
     var imgSelect = data.data[0].images.original.url;
 
     $("#img-placer").attr("src", imgSelect);
  }
-
  // When "Click Me! " Button is Clicked, Generate Random Cocktail
 $("#random-button").on("click", function () {
     randomCocktail()
