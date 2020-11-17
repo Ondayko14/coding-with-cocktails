@@ -157,7 +157,7 @@ var loadfunctions = function() {
  //Get Corresponding Cocktail Img
  var cocktailImg = function () {
   var apiKey = "8FuSrS1RcUYjB1yNzrw16a59YJ3g0AUk";
-	fetch("https://api.giphy.com/v1/gifs/search?api_key="+apiKey+"&q="+giphyNameSearch).then(function(response) {
+	fetch("https://api.giphy.com/v1/gifs/search?api_key="+apiKey+"&q="+giphyNameSearch+"&rating=pg-13").then(function(response) {
 		response.json().then(function(data) {
 			giphyObj(data);
 		});
@@ -172,8 +172,8 @@ var loadfunctions = function() {
     } else {
       //random number for data
     var randomNum = Math.floor((Math.random()*data.data.length));
+      //selects the img
     var imgSelect = data.data[randomNum].images.original.url;
-    console.log(randomNum);
     };
     $("#img-placer").attr("src", imgSelect);
  }
@@ -189,12 +189,6 @@ $(document).on("click", ".history", function() {
   recentCocktail(clickedName);
 })
 
-
-//random number generator
-var randomNumber = function(data) {
-  var number = Math.floor((Math.random()*data.length));
-  console.log(number);
-};
 
 // Load Recent Cocktails from Local Storage when page loads
 loadfunctions();
