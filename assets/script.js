@@ -170,7 +170,10 @@ var loadfunctions = function() {
     if(!data.data[0]) {
       var imgSelect = "https://media2.giphy.com/media/UWpfAsp7klhw4/200.webp?cid=ecf05e470vrohag4v3mode6jf56nv67dbzkao59lusslf51p&rid=200.webp";
     } else {
-    var imgSelect = data.data[0].images.original.url;
+      //random number for data
+    var randomNum = Math.floor((Math.random()*data.data.length));
+    var imgSelect = data.data[randomNum].images.original.url;
+    console.log(randomNum);
     };
     $("#img-placer").attr("src", imgSelect);
  }
@@ -185,6 +188,13 @@ $(document).on("click", ".history", function() {
   var clickedName = $(this).text(); 
   recentCocktail(clickedName);
 })
+
+
+//random number generator
+var randomNumber = function(data) {
+  var number = Math.floor((Math.random()*data.length));
+  console.log(number);
+};
 
 // Load Recent Cocktails from Local Storage when page loads
 loadfunctions();
