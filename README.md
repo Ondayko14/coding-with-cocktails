@@ -56,7 +56,7 @@ Brandon Ondayko
 - Github - [@Ondayko14](https://github.com/Ondayko14)
 
 Jessica Jensen
-- Github -  [@jrjensen14](https://github.com/rjensen14)
+- Github -  [@jrjensen14](https://github.com/jrjensen14)
 
 
 [Back To The Top](#coding-with-cocktails)
