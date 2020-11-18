@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F8F9FA;
+}
+
+header {
+    background-color: #212529;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #E9ECEF;
+}
+
+#app-description-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#app-description {
+    font-size: 1.5rem;
+}
+
+/*CSS Wand Librabry Animation */
+.click-me-button {
+  color: #E9ECEF;
+  background-color: #343A40;
+  border: 1px solid #212529;
+  border-radius: 4px;
+  padding: 15px 18px 30px 15px;
+  cursor: pointer;
+  height: 32px;
+  font-size: 16px;
+  box-shadow: 0 0 4px #999;
+  outline: none;
+  background-position: center;
+  transition: background 0.8s;
+}
+.click-me-button:hover{
+  background: #b10f2e radial-gradient(circle, transparent 1%, #212529 1%)
+   center/15000%;
+  color: white;
+}
+
+.click-me-button:active{
+  background-color: #292d3e;
+  background-size: 100%;
+  transition: background 0s;
+}
+/* end of CSS Wand animation */
+
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+
+}
+
+/* Left Side */
+#history-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    grid-column: 1;
+    margin-left: 1rem;
+    margin-right: 1rem;;
+}
+
+.history {
+    background-color: #6C757D;
+    color: #E9ECEF;
+    margin-top: 1rem;
+    width: 50%;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+.history:hover {
+    transform: scale(1.1);
+    }
+
+/* Right Side */
+#drink-wrapper {
+    display: none;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    grid-column: 2;
+    margin-top: 1rem;
+}
+
+img {
+    width: 100%;
+}
+
+#drink-title {
+    background-color: #212529;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    color: #E9ECEF;
+    font-size: 2.5rem;
+    padding: 0;
+    margin: 0;
+    padding: 0.5rem;
+}
+
+.directions-h3 {
+    padding: 0;
+    margin-top: 1rem;
+    text-decoration: underline;
+    display: inline;
+    font-size: 1.5rem;
+}
+
+.directions-p {
+    display: inline;
+    font-size: 1.3rem;
+}
+
+#ingredients-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.ingredients-h3 {
+    padding: 0;
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+    text-decoration: underline;
+    font-size: 1.5rem;
+}
+
+ul {
+   margin: 0;
+}
+
+li {
+    font-size: 1.3rem;
+}
+
+
+
+
+
+/*# sourceMappingURL=style.css.map */
