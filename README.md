@@ -56,7 +56,7 @@ Brandon Ondayko
 - Github - [@Ondayko14](https://github.com/Ondayko14)
 
 Jessica Jensen
-- Github -  [@fancibleunicorn](https://github.com/fancibleunicorn)
+- Github -  [@jrjensen14](https://github.com/rjensen14)
 
 
 [Back To The Top](#coding-with-cocktails)
