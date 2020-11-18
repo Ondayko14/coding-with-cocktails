@@ -27,8 +27,8 @@ Recently viewed cocktails are saved to local storage, and can be viewed again by
 - JQuery
 - CSS WAND
 - SASS
--CocktailDB API
--GIPHY API
+- CocktailDB API
+- GIPHY API
 
 [Back To The Top](#coding-with-cocktails)
 
