@@ -50,8 +50,7 @@ To view a random cocktail recipe, click the "Clicke Me!" button.  To view a rece
 ## Authors Info
 
 Adam Crandall
-- Github -  [@fancibleunciorn](https://github.com/fancibleunicorn)
-- Twitter - [@FancibleUnicorn](https://twitter.com/FancibleUnicorn)
+- Github -  [@fancibleunicorn](https://github.com/fancibleunicorn)
 
 Brandon Ondayko
 
