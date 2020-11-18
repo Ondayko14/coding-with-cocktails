@@ -25,9 +25,10 @@ Recently viewed cocktails are saved to local storage, and can be viewed again by
 - CSS
 - Javascript
 - JQuery
-- ?CSS Lanaguage?
--CocktailDB API
--GIPHY API
+- CSS WAND
+- SASS
+- CocktailDB API
+- GIPHY API
 
 [Back To The Top](#coding-with-cocktails)
 
@@ -41,7 +42,7 @@ To view a random cocktail recipe, click the "Clicke Me!" button.  To view a rece
 
 ## Website
 
-?????????????????????????
+https://Ondayko14.github.io/coding-with-cocktails/ 
 
 [Back To The Top](#coding-with-cocktails)
 
@@ -56,7 +57,7 @@ Brandon Ondayko
 - Github - [@Ondayko14](https://github.com/Ondayko14)
 
 Jessica Jensen
-- Github -  [@fancibleunicorn](https://github.com/fancibleunicorn)
+- Github -  [@jrjensen14](https://github.com/jrjensen14)
 
 
 [Back To The Top](#coding-with-cocktails)
