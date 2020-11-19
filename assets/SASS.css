@@ -90,7 +90,7 @@ main #history-wrapper .history:hover {
 main #drink-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
