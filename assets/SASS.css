@@ -23,6 +23,10 @@ header h1 {
 }
 
 article {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -32,10 +36,6 @@ article {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   text-align: center;
 }
 
@@ -112,6 +112,7 @@ main #drink-wrapper {
 main #drink-wrapper img {
   width: 350px;
   height: 300px;
+  border: white;
 }
 
 main #drink-wrapper h2 {
@@ -170,5 +171,28 @@ main #drink-wrapper #ingredients-wrapper ul {
 
 main #drink-wrapper #ingredients-wrapper ul li {
   font-size: 1.3rem;
+}
+
+@media screen and (min-width: 320px) and (max-width: 760px) {
+  header {
+    text-align: center;
+  }
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  #history-wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+  }
 }
 /*# sourceMappingURL=SASS.css.map */

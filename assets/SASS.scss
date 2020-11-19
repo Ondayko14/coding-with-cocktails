@@ -1,7 +1,7 @@
 $textColor: #E9ECEF; 
 $backgroundW: #E9ECEF;
 $backgroundG: #212529;
-$primaryBtn: #343A40;
+$primaryBtn: #6C757D;
 
 @mixin flexCenter {
     display: flex;
@@ -25,8 +25,8 @@ header {
 }
 
 article {
-    @include flexCenter;
     flex-direction: column;
+    @include flexCenter;
     text-align: center;
     p {
         font-size: 1.5rem;
@@ -44,7 +44,7 @@ main {
         margin-left: 1rem;
         margin-right: 1rem;
        .history {
-            background-color: #6C757D;
+            background-color: $primaryBtn;
             color: $textColor;
             border-radius: 4px;
             margin-top: 1rem;
@@ -65,6 +65,7 @@ main {
         img {
             width: 350px;
             height: 300px;
+            border: white;
         }
         h2 {
             background-color: $backgroundG;
@@ -105,4 +106,18 @@ main {
 
 }
 
-
+//Phone
+@media screen and (min-width: 320px) and (max-width: 760px) {
+    header {
+        text-align: center;  
+    }
+    main {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #history-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+}
