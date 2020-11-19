@@ -1,0 +1,123 @@
+$textColor: #E9ECEF; 
+$backgroundW: #E9ECEF;
+$backgroundG: #212529;
+$primaryBtn: #6C757D;
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $backgroundW;
+}
+
+header {
+    background-color: $backgroundG;
+    @include flexCenter;
+    h1 {
+        color: $textColor;
+        font-size: 3rem;
+    }
+}
+
+article {
+    flex-direction: column;
+    @include flexCenter;
+    text-align: center;
+    p {
+        font-size: 1.5rem;
+    }   
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    #history-wrapper {
+        @include flexCenter;
+        flex-direction: column;
+        grid-column: 1;
+        margin-left: 1rem;
+        margin-right: 1rem;
+       .history {
+            background-color: $primaryBtn;
+            color: $textColor;
+            border-radius: 4px;
+            margin-top: 1rem;
+            width: 50%;
+            font-size: 1rem;
+            padding: 1rem;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }    
+    }
+    #drink-wrapper {
+        @include flexCenter;
+        justify-content: flex-start;
+        flex-direction: column;
+        grid-column: 2;
+        margin-top: 1rem;
+        img {
+            width: 350px;
+            height: 300px;
+            border: white;
+        }
+        h2 {
+            background-color: $backgroundG;
+            width: 350px;
+            @include flexCenter;
+            color: $textColor;
+            border-radius: 4px;
+            font-size: 2.5rem;
+            margin: 0;
+            padding: 0.5rem;
+        }
+        h3 {
+            padding: 0;
+            margin-top: 1rem;
+            margin-bottom: 0rem;
+            text-decoration: underline;
+            display: inline;
+            font-size: 1.5rem;
+        }
+        p {
+            display: inline;
+            font-size: 1.3rem; 
+        }
+        #ingredients-wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            ul {
+               margin: 0;
+               li {
+                   font-size: 1.3rem;
+               } 
+            }
+        }
+    }
+
+}
+
+//Phone
+@media screen and (min-width: 320px) and (max-width: 760px) {
+    header {
+        text-align: center;  
+    }
+    main {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #history-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+}

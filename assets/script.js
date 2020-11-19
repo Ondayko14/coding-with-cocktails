@@ -175,7 +175,7 @@ var loadfunctions = function() {
       //selects the img
     var imgSelect = data.data[randomNum].images.original.url;
     };
-    $("#img-placer").attr("src", imgSelect);
+    $("#img-placer").attr("src", imgSelect).width("350px").height("300px");
  }
 
  // When "Click Me! " Button is Clicked, generate random cocktail

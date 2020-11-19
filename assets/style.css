@@ -1,32 +1,32 @@
-body {
+/* body {
     margin: 0;
     padding: 0;
     background-color: #F8F9FA;
-}
+} */
 
-header {
+/* header {
     background-color: #212529;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
-h1 {
+/* h1 {
     font-size: 3rem;
     color: #E9ECEF;
-}
+} */
 
-#app-description-wrapper {
+/* #app-description-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-}
+} */
 
-#app-description {
+/* #app-description {
     font-size: 1.5rem;
-}
+} */
 
 /*CSS Wand Librabry Animation */
 .click-me-button {
@@ -57,25 +57,25 @@ h1 {
 /* end of CSS Wand animation */
 
 
-main {
+/* main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
 
-}
+} */
 
 /* Left Side */
-#history-wrapper {
+/* #history-wrapper {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     grid-column: 1;
     margin-left: 1rem;
-    margin-right: 1rem;;
-}
+    margin-right: 1rem;
+} */
 
-.history {
+/* .history {
     background-color: #6C757D;
     color: #E9ECEF;
     margin-top: 1rem;
@@ -86,19 +86,19 @@ main {
 
 .history:hover {
     transform: scale(1.1);
-    }
+    } */
 
 /* Right Side */
-#drink-wrapper {
+/* #drink-wrapper {
     display: none;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     grid-column: 2;
     margin-top: 1rem;
-}
+} */
 
-img {
+/* img {
     width: 100%;
 }
 
@@ -108,30 +108,30 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
-h2 {
+/* h2 {
     color: #E9ECEF;
     font-size: 2.5rem;
     padding: 0;
     margin: 0;
     padding: 0.5rem;
-}
+} */
 
-.directions-h3 {
+/* .directions-h3 {
     padding: 0;
     margin-top: 1rem;
     text-decoration: underline;
     display: inline;
     font-size: 1.5rem;
-}
+} */
 
-.directions-p {
+/* .directions-p {
     display: inline;
     font-size: 1.3rem;
-}
+} */
 
-#ingredients-wrapper {
+/* #ingredients-wrapper {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -145,15 +145,15 @@ h2 {
     margin-bottom: 0rem;
     text-decoration: underline;
     font-size: 1.5rem;
-}
+} */
 
-ul {
+/* ul {
    margin: 0;
 }
 
 li {
     font-size: 1.3rem;
-}
+} */
 
 
 
