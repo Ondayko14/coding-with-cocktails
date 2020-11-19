@@ -109,11 +109,11 @@ main #drink-wrapper {
   margin-top: 1rem;
 }
 
-main #drink-wrapper img {
+/* main #drink-wrapper img {
   width: 350px;
   height: 300px;
   border: white;
-}
+} */
 
 main #drink-wrapper h2 {
   background-color: #212529;
